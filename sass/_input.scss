@@ -1,0 +1,19 @@
+input[type="text"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	bottom: 0;
+	width: 100%;
+	z-index: 9;
+	margin: auto;
+	border: none;
+	display:none;
+	font-family: sans-serif;
+	font-size: 4em;
+	color: #666;
+	padding:3px;
+	&:focus{
+		outline:none;
+	}
+}

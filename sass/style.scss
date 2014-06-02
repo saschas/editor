@@ -1,0 +1,56 @@
+@import 'codemirror';
+@import 'monokai';
+
+
+// ui 
+@import 'input';
+@import 'buttons';
+@import 'selection';
+
+
+@import 'menu';
+@import 'editor';
+@import 'aside';
+
+//block
+@import 'block';
+@import 'group';
+
+@import 'real';
+
+
+div.CodeMirror-code>div {
+line-height: 1.3em;
+font-size: 1.4em;
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+html,body{
+	width:100%;
+	height:100%;
+}
+
+body{
+	background:#5F6468;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
