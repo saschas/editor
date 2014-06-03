@@ -3,17 +3,16 @@ $head-height:40px;
 .block {
 	width: 30vw;
 	height: 20vw;
-	overflow: hidden;
 	background: #fff;
 	z-index: 1;
 	position:absolute;
-	box-shadow: 0 0 2px 0 rgba(0,0,0,0.55);
+	//box-shadow: 0 0 2px 0 rgba(0,0,0,0.55);
 
 	&.last{
 		z-index:2;
 	}
 	&.active{
-		box-shadow: 0 0 1px 0 rgba(250,250,250,1);
+		//box-shadow: 0 0 1px 0 rgba(250,250,250,1);
 	}
 	& .snapper {
 		position: absolute;
@@ -44,11 +43,17 @@ $head-height:40px;
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		padding-top: $head-height + 10px;
+		padding-top: $head-height;
 	}
 }
 
 .group{
+	width: 300px;
+	position: absolute;
+	background: #222;
+	margin: 5px;
+	padding: 20px;
+
 	& .block {
 		position: relative!Important;
 		height:40px;
@@ -90,7 +95,7 @@ $head-height:40px;
 			height: 40px;
 			position: absolute;
 			right:0;
-			&.js {
+			&.javascript {
 				background: rgb(255, 214, 0);
 			}
 			&.html {
@@ -176,3 +181,4 @@ div.ui-resizable-handle.ui-resizable-se.ui-icon.ui-icon-gripsmall-diagonal-se {
 		z-index: 99999;
 	}
 }
+

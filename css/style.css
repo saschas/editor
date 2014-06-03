@@ -415,6 +415,31 @@ button#add {
   position: absolute;
   z-index: 9999; }
 
+.contextmenuCode {
+  position: absolute;
+  z-index: 99999;
+  padding: 0.5em;
+  background: #eee;
+  box-shadow: 0 0 3px 0 #000; }
+  .contextmenuCode .option {
+    padding: 2px 15px;
+    color: #222;
+    cursor: pointer;
+    border: 1px dashed #eee; }
+    .contextmenuCode .option:hover {
+      border: 1px dashed #ccc; }
+
+.labelHolder {
+  position: absolute;
+  left: 100%;
+  width: 250px;
+  height: 100%;
+  background: #eee;
+  padding: 15px;
+  overflow-y: auto; }
+  .labelHolder label {
+    display: block; }
+
 .overlay {
   width: 50px;
   position: fixed;
@@ -426,7 +451,8 @@ button#add {
   margin: auto;
   text-align: center;
   padding-top: 50px;
-  overflow: hidden; }
+  overflow: hidden;
+  display: none; }
   .overlay .inner > div {
     margin: 3px 0;
     background: #eee;
@@ -440,10 +466,10 @@ button#add {
   position: absolute;
   height: 100%;
   right: 0;
-  padding: 1em;
-  padding-left: 70px; }
+  padding: 1em; }
 
 aside {
+  display: none;
   width: 50px;
   height: 100%;
   top: 0;
@@ -455,15 +481,11 @@ aside {
 .block {
   width: 30vw;
   height: 20vw;
-  overflow: hidden;
   background: #fff;
   z-index: 1;
-  position: absolute;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.55); }
+  position: absolute; }
   .block.last {
     z-index: 2; }
-  .block.active {
-    box-shadow: 0 0 1px 0 #fafafa; }
   .block .snapper {
     position: absolute;
     height: 0;
@@ -485,24 +507,30 @@ aside {
     width: 100%;
     height: 100%;
     position: absolute;
-    padding-top: 50px; }
+    padding-top: 40px; }
 
-.group .block {
-  position: relative !important;
-  height: 40px;
-  width: 98% !important;
-  margin: 0 auto 10px !important; }
-  .group .block :not(header, header *) {
-    display: none; }
-.group .inner {
-  top: 0;
-  width: 95%;
-  padding-top: 50px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  overflow: hidden;
-  padding-bottom: 50px; }
+.group {
+  width: 300px;
+  position: absolute;
+  background: #222;
+  margin: 5px;
+  padding: 20px; }
+  .group .block {
+    position: relative !important;
+    height: 40px;
+    width: 98% !important;
+    margin: 0 auto 10px !important; }
+    .group .block :not(header, header *) {
+      display: none; }
+  .group .inner {
+    top: 0;
+    width: 95%;
+    padding-top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 50px; }
 
 .block header, .group header {
   height: 40px;
@@ -520,7 +548,7 @@ aside {
     height: 40px;
     position: absolute;
     right: 0; }
-    .block header .type.js, .group header .type.js {
+    .block header .type.javascript, .group header .type.javascript {
       background: #ffd600; }
     .block header .type.html, .group header .type.html {
       background: #FF5200; }
@@ -599,10 +627,10 @@ div#real {
   bottom: 0;
   margin: auto;
   right: 0;
-  height: 40vh;
+  height: 100vh;
   width: 30vw;
   background: #fff;
-  overflow: scroll; }
+  overflow: hidden; }
 
 div.CodeMirror-code > div {
   line-height: 1.3em;
